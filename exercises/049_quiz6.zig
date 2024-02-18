@@ -27,7 +27,13 @@ const Elephant = struct {
     // Your Elephant trunk methods go here!
     // ---------------------------------------------------
 
-    ???
+    pub fn hasTrunk(self: *const Elephant) bool {
+        return self.trunk != null;
+    }
+
+    pub fn getTrunk(self: *const Elephant) *Elephant {
+        return self.trunk.?;
+    }
 
     // ---------------------------------------------------
 
